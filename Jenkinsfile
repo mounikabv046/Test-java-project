@@ -8,7 +8,7 @@ pipeline {
     }
     stage ('build') {
       steps {
-        mvn clean package          
+        mvn install          
 // check if the build is successful
           sh 'mvn -v'
       }
