@@ -1,5 +1,5 @@
 pipeline {
-  agent java
+  agent {java}
   stages {
     stage ('git') {
       steps {
