@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent java-project
   stages {
     stage ('git') {
       steps {
@@ -8,9 +8,7 @@ pipeline {
     }
     stage ('build') {
       steps {
-        mvn install          
-// check if the build is successful
-          sh 'mvn -v'
+       sh ''mvn install''          
       }
     }
   }
