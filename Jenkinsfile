@@ -11,6 +11,11 @@ pipeline {
        sh '''mvn clean install'''          
       }
     }
+    stage ( 'deploy' ) {
+      steps {
+        sshagent(['tomcat-deploy']) {
+           scp /var/lib/jenkins/workspace/Build/target/simpleweb-1.0-SNAPSHOT.jar ec2-user@172.31.37.18:/opttomcat9/webapps   
+}
     
   }
 }
