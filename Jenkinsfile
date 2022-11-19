@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage ('git') {
       steps {
-        git branch: 'main', credentialsId: 'git-private-repo', url: 'https://github.com/sandeep-kengal/java.git
+        git branch: 'main', credentialsId: 'git-private-repo', url: 'https://github.com/sandeep-kengal/java.git'
       }
     }
     stage ('build') {
