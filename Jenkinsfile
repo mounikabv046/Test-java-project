@@ -1,5 +1,8 @@
 pipeline {
-  agent {java}
+  agent {
+  label 'java'
+
+
   stages {
     stage ('git') {
       steps {
@@ -12,4 +15,5 @@ pipeline {
       }
     }
   }
+}
 }
