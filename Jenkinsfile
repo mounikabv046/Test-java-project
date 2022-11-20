@@ -1,3 +1,8 @@
+pipeline{
+  agent any;
+  stages{
+    stage('build javafile'){
+      steps{
 class Main {
 
   public static void main(String[] args) {
@@ -11,5 +16,9 @@ class Main {
     // add two numbers
     int sum = first + second;
     System.out.println("The sum is: " + sum);
+  }
+}
+      }
+    }
   }
 }
